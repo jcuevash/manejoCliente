@@ -42,4 +42,10 @@ public class ControladorInicio {
          
          return "modificar";
     }
+    
+    @GetMapping("/eliminar/{idPersona}")
+    public String eliminaPersona(Persona persona){
+        personaService.eliminar(persona);
+        return "redirect:/";
+    }
 }
